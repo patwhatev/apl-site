@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6vh 5vw 4vh;
+  gap: 2rem;
+}
+
+.content {
+  flex: .2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-image {
+  max-width: 70vw;
+  max-height: 45vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.title {
+  font-size: clamp(4rem, 8vw, 5rem);
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+  display: inline-block;
+  transform: scaleY(1);
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.link {
+  color: #4d8dff;
+  text-decoration: underline;
+  font-size: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.link:hover,
+.link:focus-visible {
+  opacity: 0.8;
+}
+
+/* Tablet / small laptop */
+@media (min-width: 768px) {
+  .page {
+    padding: 3vh 3vw 2vh;
+  }
+
+  .hero-image {
+    max-width: 40vw;
+    max-height: 50vh;
+  }
+
+  .links {
+    gap: 3rem;
+  }
+
+  .link {
+    font-size: 1.05rem;
+  }
+}
+
+/* Laptop / desktop monitor */
+@media (min-width: 1200px) {
+  .hero-image {
+    max-width: 28vw;
+    max-height: 55vh;
+  }
+
+  .title {
+    font-size: clamp(4rem, 6vw, 5rem);
+  }
+
+  .links {
+    gap: 4rem;
+  }
+}
